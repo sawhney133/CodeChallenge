@@ -14,7 +14,7 @@ function right_pad(Str, Len) {
     return Str;
 }
 
-//Funtion to check input string matches desired schema and valid values and valid datatypes
+//Function to check input string matches desired schema and valid values and valid datatypes
 function is_valid_object(Element) {
 
     if (Element.constructor == Object) {
