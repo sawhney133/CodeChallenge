@@ -1,0 +1,185 @@
+{
+  "improperRequests": {
+    "blankArray": {
+      "request": [],
+      "response": "Invalid Input"
+    },
+    "blankJson": {
+      "request": {},
+      "response": "Invalid Input"
+    },
+    "oneElementUnderRoot": {
+      "request": {
+        "Details": {
+          "Type": "l",
+          "Weight": 160
+        }
+      },
+      "response": "Invalid Input"
+    },
+    "threeElementsUnderRoot": {
+      "request": {
+        "Name": "Karan",
+        "Age": 27,
+        "Details": {
+          "Type": "l",
+          "Weight": 160
+        }
+      },
+      "response": "Invalid Input"
+    },
+    "nameMissing": {
+      "request": {
+        "Name1": "Karan",
+        "Details": {
+          "Type": "l",
+          "Weight": 160
+        }
+      },
+      "response": "Invalid Input"
+    },
+    "nameIsNum": {
+      "request": {
+        "Name1": 123,
+        "Details": {
+          "Type": "l",
+          "Weight": 160
+        }
+      },
+      "response": "Invalid Input"
+    },
+    "detailsMissing": {
+      "request": {
+        "Name": "Karan",
+        "Details1": {
+          "Type": "l",
+          "Weight": 160
+        }
+      },
+      "response": "Invalid Input"
+    },
+    "detailsIsNum": {
+      "request": {
+        "Name1": "Karan",
+        "Details": 123
+      },
+      "response": "Invalid Input"
+    },
+    "oneElementUnderDetails": {
+      "request": {
+        "Name": "Karan",
+        "Details": {
+          "Weight": 160
+        }
+      },
+      "response": "Invalid Input"
+    },
+    "threeElementsUnderDetails": {
+      "request": {
+        "Name": "Karan",
+        "Details": {
+          "Type": "l",
+          "Description": "Pounds",
+          "Weight": 160
+        }
+      },
+      "response": "Invalid Input"
+    },
+    "typeMissing": {
+      "request": {
+        "Name": "Karan",
+        "Details": {
+          "Type1": "l",
+          "Weight": 160
+        }
+      },
+      "response": "Invalid Input"
+    },
+    "typeIsInvalid": {
+      "request": {
+        "Name": 123,
+        "Details": {
+          "Type": "lb",
+          "Weight": 160
+        }
+      },
+      "response": "Invalid Input"
+    },
+    "weightMissing": {
+      "request": {
+        "Name": "Karan",
+        "Details": {
+          "Type": "l",
+          "Weight1": 160
+        }
+      },
+      "response": "Invalid Input"
+    },
+    "weightIsInvalid": {
+      "request": {
+        "Name": "Karan",
+        "Details": {
+          "Type": "l",
+          "Weight": "160"
+        }
+      },
+      "response": "Invalid Input"
+    }
+  },
+  "properRequests": {
+    "singleElement": {
+      "request": {
+        "Name": "Karan",
+        "Details": {
+          "Type": "k",
+          "Weight": 160
+        }
+      },
+      "response": {
+        "MinWeight": 160,
+        "MaxWeight": 160
+      }
+    },
+    "multipleElement": {
+      "request": [{
+        "Name": "Nancy",
+        "Details": {
+          "Type": "k",
+          "Weight": 140
+        }
+      },
+        {
+          "Name": "Sam",
+          "Details": {
+            "Type": "l",
+            "Weight": 100
+          }
+        },
+        {
+          "Name": "Annie",
+          "Details": {
+            "Type": "k",
+            "Weight": 75
+          }
+        },
+        {
+          "Name": "Wendy",
+          "Details": {
+            "Type": "k",
+            "Weight": 50
+          }
+        },
+        {
+          "Name": "Jennie",
+          "Details": {
+            "Type": "l",
+            "Weight": 145
+          }
+        }],
+      "response": {
+        "MinWeight": 45.359237,
+        "MaxWeight": 140
+      }
+    }
+  }
+}
