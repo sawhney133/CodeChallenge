@@ -20,7 +20,7 @@ function is_valid_object(Element) {
     if (Element.constructor == Object) {
 
         return (Object.keys(Element).length == 2 &&
-            Object.keys(Element).indexOf('Name') >= 0 &&
+            Object.keys(Element).indexOf('Name') >= 0 &&a
             typeof Element.Name == 'string' &&
             Object.keys(Element).indexOf('Details') >= 0 &&
             Element.Details.constructor == Object &&
@@ -117,15 +117,15 @@ function print_weight(Converted_List) {
 
     Converted_List.forEach(function (Converted_Object) {
 
-        console.log(right_pad(Converted_Object.Name, 15), Converted_Object.Details.Weight);
+        console.log(right_pad(Converted_Object.Name, 15),'k', Converted_Object.Details.Weight);
     })
 }
 
 //Print maximum and minimum weight
 function print_max_and_min(Min, Max) {
 
-    console.log("Max weight was %s c in %s", JSON.stringify(Max.Details), Max.Name);
-    console.log("Min weight was %s c in %s", JSON.stringify(Min.Details), Min.Name);
+    console.log("Max weight was %s k of %s", Max.Details.Weight, Max.Name);
+    console.log("Min weight was %s k of %s", Min.Details.Weight, Min.Name);
 }
 
 //Function to convert list weight to kg and find minimum/maximum weight in the list -
