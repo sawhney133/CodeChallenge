@@ -124,6 +124,25 @@
         }
       },
       "response": "Invalid Input"
+    },
+    "multipleRecords": {
+      "request": [
+        {
+          "Name": "Karan2",
+          "Details": {
+            "Type": "l",
+            "Weight": 160
+          }
+        },
+        {
+          "Name": "Karan1",
+          "Details": {
+            "Type": "lb",
+            "Weight": 160
+          }
+        }
+      ],
+      "response": "Invalid Input"
     }
   },
   "properRequests": {
@@ -141,13 +160,14 @@
       }
     },
     "multipleElement": {
-      "request": [{
-        "Name": "Nancy",
-        "Details": {
-          "Type": "k",
-          "Weight": 140
-        }
-      },
+      "request": [
+        {
+          "Name": "Nancy",
+          "Details": {
+            "Type": "k",
+            "Weight": 140
+          }
+        },
         {
           "Name": "Sam",
           "Details": {
@@ -175,7 +195,9 @@
             "Type": "l",
             "Weight": 145
           }
-        }],
+        }
+      ]
+    ,
       "response": {
         "MinWeight": 45.359237,
         "MaxWeight": 140

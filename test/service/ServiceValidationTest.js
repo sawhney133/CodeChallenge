@@ -120,6 +120,15 @@ describe('Invalid Input', () => {
 
     });
 
+    it('Incorrect schema passed - multiple Records', (done) => {
+
+        var res = servicefunctions.format_weight(testData['improperRequests']['multipleRecords']['request']);
+        console.log(res);
+        expect(res).equals(testData['improperRequests']['multipleRecords']['response']);
+        done();
+
+    });
+
 });
 describe('Valid Input', () => {
 
